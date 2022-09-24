@@ -1,0 +1,114 @@
+/*PAGINA PRODUCTOS*/
+.banner {
+    background: url('../img/banner_ceviche.jpg') no-repeat center center/cover;
+    height: 40vh;
+    clip-path: ellipse(75% 70% at 50% 28%);
+    color: #fff;
+    position: relative;
+    padding-top: 0.938rem;
+}
+.regresar{
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color .8s;
+    display: flex;
+    max-width: 340px;
+}
+.regresar:hover{
+    color: white;
+}
+.titulo-categoria{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 30%;
+}
+#img-producto{
+    height: 250px;
+}
+.compra{
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    cursor: grab;
+}
+h1{
+    font-family: 'Lobster', cursive;
+}
+.modal-compra{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    top: 0;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .8s;
+}
+.modal-show{
+    opacity: 1;
+    pointer-events: unset;
+}
+.cont-compra{
+    width: 60%;
+    height: 80%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+.cont-compra i{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.info-carrito{
+    width: 100%;
+    height: 70%;
+    overflow: scroll;
+}
+/* .info-compra{
+    width: 100%;
+    height: 70%;
+    overflow: scroll;
+} */
+/* .producto{
+    background-color: white;
+    padding: 20px;
+    width: 95%;
+    height: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin: 2px auto;
+    border: 2px solid gray;
+} */
+.producto img{
+    width: 25%;
+    max-height: 90px;
+}
+.pie-compra{
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+    margin-top: 10px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#boton-cerrar{
+    cursor: grab;
+}
+.borrar-producto:hover{
+    color: red;
+    cursor: pointer;
+}

@@ -1,0 +1,31 @@
+@media(max-width: 1000px) {
+    .contenido{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .columna1, .columna2{
+        width: 90%;
+    }
+}
+@media(max-width: 500px) {
+    .regresar{
+        width: 250px;
+    }
+    .compra{
+        right: 20px;
+    }
+    .banner{
+        clip-path: ellipse(90% 65% at 50% 30%);
+    }
+}
+@media(max-width: 600px) {
+    .div-img-carta{
+        width: 95%;
+        height: 300px;
+    }
+}
+@media(max-width: 360px) {
+    .regresar{
+        width: 220px;
+    }
+}

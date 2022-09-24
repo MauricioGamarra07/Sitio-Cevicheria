@@ -1,0 +1,261 @@
+
+
+img {
+   width: 100%;
+}
+
+.navbar nav {
+   order: 1;
+   margin-right: 10px;
+}
+.navbar nav a {
+   padding: 0.938rem;
+   font-weight: 900;
+   font-size: 0.938rem;
+   transition: all 0.4s ease-in-out;
+   text-decoration: none;
+}
+.navbar a:hover{
+   color: white;
+}
+.navbar nav a:hover {
+   border-bottom: 0.125rem solid #fff;
+}
+.navbar ul {
+   display: flex;
+}
+.content .social ul{
+   display: flex;
+   position: absolute;
+   bottom: 10%;
+   right: 5%;
+}
+.content .social a {
+   opacity: 0.5;
+   padding: 0 1.25rem;
+   transition: all 0.4s ease-in-out;
+   color: white;
+   font-size: 32px;
+}
+.content .social a:hover {
+   opacity: 1;
+}
+/* food */
+.food img {
+   border-radius: 0.188rem;
+}
+.food img:hover {
+   opacity: 0.7;
+}
+/* Rooms */
+.rooms{
+   margin-top: 40px;
+}
+.rooms p {
+   font-weight: 500;
+}
+.rooms .room {
+   display: flex;
+   flex-direction: row;
+   padding: 0 1.25rem;
+   font-weight: 500;
+   margin-top: 20px;
+}
+.rooms .room > div {
+   display: flex;
+   flex-direction: column;
+   padding: 0 1.25rem;
+}
+
+.rooms .room img {
+   border-radius: 0.188rem;
+}
+
+.rooms .room h3 {
+   padding-top: 1.25rem;
+   font-weight: 500;
+   font-size: 1.313rem;
+}
+
+.rooms .room .list {
+   padding: 0.938rem 0 1.875rem 0;
+}
+
+.rooms .room .list ul {
+   list-style: disc;
+   padding: 0 1.125rem;
+   font-size: 1.063rem;
+}
+
+.rooms .room .list ul li {
+   padding: 0.313rem 0;
+}
+
+.rooms .room .btn {
+   width: 100%;
+   margin-top: 0.625rem;
+   text-align: center;
+}
+
+.rooms .room .btn:hover {
+   background: #3cce96;
+   color: #fff;
+}
+
+/* Contact */
+.contact h2 {
+   font-weight: 500;
+   padding-top: 0.625rem 0;
+}
+
+.contact form {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+   width: 100%;
+}
+
+.contact input {
+   width: 100%;
+   padding: 0.625rem;
+   border: 0.063rem solid #ddd;
+}
+
+.contact input:focus {
+   outline: none;
+   border: 0.063rem solid #59d8a7;
+   font-size: 0.825rem;
+}
+
+.contact .form-group {
+   padding-bottom:1.25rem;
+   width: 100%;
+}
+
+.form-group label {
+   display: none;
+}
+.hero.about-post .content {
+   padding-top: 1.25rem;
+}
+.hero.about-post .content h1 {
+   font-size: 4.375rem;
+}
+.contact-info {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 0 0 1.875rem;
+   font-size: 1.25rem;
+   font-weight: 500;
+}
+.contact-info p {
+   padding: 0 1.25rem;
+}
+.contact-info i {
+   color: #aaa;
+   padding: 0.625rem;
+}
+/* Footer */
+.footer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 1.875rem;
+}
+.socials a {
+   font-size: 1.25rem;
+   color: #fff;
+   padding: 0.5rem 0.625rem;
+}
+.socials a:hover {
+   color: var(--celeste);
+}
+/* Media queries */
+/* ? @900px */
+@media(max-width: 56.25rem) {
+   .navbar .logo {
+      order: 1;
+      padding: 0.938rem 0;
+      transform: none;
+   }
+   
+   .navbar nav {
+      order: 3;
+   }
+   
+   .navbar .social {
+      display: none;
+      order: 2;
+   }
+   
+   .hero .content h1 {
+      font-size: 4.688rem;
+   }
+
+   .hero .content p {
+      font-size: 1.25rem;
+   }
+}
+
+/* ? @768px */
+@media(max-width: 48rem) {
+   .flex-items {
+      flex-direction: column;
+   }
+
+   section.flex-columns .column {
+      flex: 100%;
+      max-width: 100%;
+   }
+
+   section.flex-grid .column {
+      flex: 50%;
+      max-width: 50%;
+   }
+
+   .rooms .room {
+      flex-direction: column;
+      padding: 0.313rem 6.25rem;
+   }
+
+   .rooms .room > div {
+      padding: 0;
+   }
+}
+
+/* ? @600px */
+@media(max-width: 37.5rem) {
+   .navbar {
+      flex-direction: column;
+      height: 6.875rem;
+   }
+
+   .navbar .logo {
+      padding: 0 1.25rem 0.938rem;
+   }
+
+   .navbar nav a {
+      padding: 0.938rem 0.813rem;
+   }
+}
+
+/* ? @500px */
+@media(max-width: 31.25rem) {
+   .hero .content {
+      line-height: 1.6;
+   }
+
+   .hero .content p {
+      font-size: 1.188rem;
+   }
+
+   .rooms .room {
+      padding: 0.625rem 1.875rem;
+   }
+}
+
