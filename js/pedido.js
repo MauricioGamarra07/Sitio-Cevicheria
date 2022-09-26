@@ -1,13 +1,18 @@
-//CARRITO DE COMPRAS
+/* CARRITO DE COMPRAS */
+
+//Aumentar y disminuir la cantidad del producto
 const disminuir = document.querySelectorAll(".boton-menos");
 const cantidad = document.querySelectorAll(".cantidad");
 const aumentar = document.querySelectorAll(".boton-mas");
 
 const carro = new Carrito();
+
+//Abrir y cerrar Modal del carrito
 const carrito = document.querySelector(".carrito");
 const modal = document.querySelector(".modal-compra");
 const cerrar = document.querySelector("#boton-cerrar");
 
+//Agregar y eliminar los productos del carrito
 const agregar = document.querySelectorAll(".boton-agregar");
 const listaProductos = document.querySelector(".info-compra");
 const vaciarCarrito = document.getElementById("limpiar");
