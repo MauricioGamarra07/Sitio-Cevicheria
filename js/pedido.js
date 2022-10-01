@@ -1,5 +1,10 @@
 /* CARRITO DE COMPRAS */
 
+//Abrir y cerrar Modal del carrito
+const carrito = document.querySelector(".carrito");
+const modal = document.querySelector(".modal-compra");
+const cerrar = document.querySelector("#boton-cerrar");
+
 //Aumentar y disminuir la cantidad del producto
 const disminuir = document.querySelectorAll(".boton-menos");
 const cantidad = document.querySelectorAll(".cantidad");
@@ -7,17 +12,14 @@ const aumentar = document.querySelectorAll(".boton-mas");
 
 const carro = new Carrito();
 
-//Abrir y cerrar Modal del carrito
-const carrito = document.querySelector(".carrito");
-const modal = document.querySelector(".modal-compra");
-const cerrar = document.querySelector("#boton-cerrar");
-
 //Agregar y eliminar los productos del carrito
-const agregar = document.querySelectorAll(".boton-agregar");
+const agregar = document.querySelectorAll(".agregar");
 const listaProductos = document.querySelector(".info-compra");
 const vaciarCarrito = document.getElementById("limpiar");
-const eliminarProducto = document.querySelectorAll(".borrar-producto");
 
+const contadorCarrito = document.getElementById("contador");
+
+let arregloCarrito = [];
 
 cargarEventos();
 
@@ -72,23 +74,53 @@ function cargarEventos() {
     }
 
 
+    let contador = 0;
+    let array = [0];
     for (let i = 0; i < agregar.length; i++) {
         agregar[i].addEventListener('click', (e) => {
             let cantidad = parseInt(newValue);
             /* console.log(cantidad); */
 
-            //Agregamos los datos del archivo productos.js
-            let id = agregar[i].getAttribute('id');
-            /* console.log(id-1); */
-            console.log(productosEntrada[0]["precio"]);
-            carro.insertarCarrito(productosEntrada[id-1], cantidad);
-        });
-    }
+            let id = parseInt(agregar[i].getAttribute('id'));
+            console.log(id);
 
-    for (let i = 0; i < eliminarProducto.length; i++) {
-        eliminarProducto[i].addEventListener('click', (e) => {
-            alert("Click en eliminar");
-            carro.eliminarProducto(e);
+            let num = array.find(item => item == id);
+            console.log(num);
+
+            let arregloProducto = [];
+
+            if (num == id){
+                console.log("Ya se agregó");
+                for (let i = 0; i < arregloCarrito.length; i++){
+                    if (arregloCarrito[i][0] == id){
+                        arregloCarrito[i][4] += cantidad;
+                    }
+                    console.log(arregloCarrito);
+                }
+                carro.actualizarCarrito(arregloCarrito);
+            }else{
+                array.push(id);
+                array.sort();
+                contador ++;
+                contadorCarrito.textContent = contador;
+                arregloProducto.push(infoProductos[i]["id"]);
+                arregloProducto.push(infoProductos[i]["img"]);
+                arregloProducto.push(infoProductos[i]["nombre"]);
+                arregloProducto.push(infoProductos[i]["precio"]);
+                arregloProducto.push(cantidad);
+                arregloCarrito.push(arregloProducto);
+                /* console.log(arregloProducto); */
+                console.log(arregloCarrito);
+                carro.insertarCarrito(infoProductos[id - 1], cantidad);
+            }
+            console.log(array);
+            /* console.log(contador); */
+            /* console.log(infoArticulos[i]); */
+
+            //Agregamos los datos del archivo productos.js
+            /* carro.insertarCarrito(infoArticulos[id - 1], cantidad); */
+
+            /* agregarAlCarrito(id); */
         });
     }
 
@@ -97,20 +129,3 @@ function cargarEventos() {
     });
 
 }
-
-/* cargarProductos(productosEntrada)
-
-function cargarProductos(producto) {
-    for (let i = 0; i < producto.length; i++) {
-    const div = document.createElement('div');
-    div.classList.add('producto');
-    div.innerHTML = `
-        <img src="${producto[i].img}">
-        <h4>${producto[i].nombre}</h4>
-        <h4>${producto[i].precio}</h4>
-        <h4>${producto[i].stock}</h4>
-        <span class="fa fa-trash borrar-producto" id="${producto.id}"></span>
-   `;
-    listaProductos.appendChild(div);
-    }
-} */

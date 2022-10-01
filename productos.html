@@ -55,7 +55,7 @@
             <h1 class="display-1">Entradas</h1>
         </div>
         <div class="compra">
-            <i class="bx bxs-cart bx-lg carrito"></i>
+            <i class="bx bxs-cart bx-lg carrito" id="contador">0</i>
         </div>
     </header>
 
@@ -88,161 +88,16 @@
     </section>
 
     <!-- Productos -->
-    <section class="container pt-4">
-        <div class="row pb-3" style="display: flex; justify-content: center;">
-            <div class="col-lg-4 col-md-6 col-sm-10 col-10">
-                <div class="card mb-3">
-                    <img src="img/chicharron.jpg" alt="" id="img-producto">
-                    <div class="card-body">
-                        <h3 class="nombre-producto">Chicharrón</h3>
-                        <ul>
-                            <li>Standard condition</li>
-                            <li>Single Size</li>
-                            <li>Room service</li>
-                        </ul>
-                        <h1 class="precio">Precio: S/ 10.00</h1>
-                        <div class="d-flex">
-                            <div class="btn-group me-3 col-4" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-primary boton-menos">-</button>
-                                <input type="text" class="cantidad" name="cant" value="1" id="1" style="width:40px">
-                                <button type="button" class="btn btn-outline-primary boton-mas">+</button>
-                            </div>
-                            <div class="d-grid gap-2 col-7 mx-auto">
-                                <button class="btn btn-primary boton-agregar" type="button" id="1">Agregar al Carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-10 col-10">
-                <div class="card mb-3">
-                    <img src="img/arroz_con_mariscos.jpg" alt="" id="img-producto">
-                    <div class="card-body">
-                        <h3 class="nombre-producto">Sopa de Cangrejo</h3>
-                        <ul>
-                            <li>Standard condition</li>
-                            <li>Single Size</li>
-                            <li>Room service</li>
-                        </ul>
-                        <h1 class="precio">Precio: S/ 12.00</h1>
-                        <div class="d-flex">
-                            <div class="btn-group me-3 col-4" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-primary boton-menos">-</button>
-                                <input type="text" class="cantidad" name="cant" value="1" id="2" style="width:40px">
-                                <button type="button" class="btn btn-outline-primary boton-mas">+</button>
-                            </div>
-                            <div class="d-grid gap-2 col-7 mx-auto">
-                                <button class="btn btn-primary boton-agregar" type="button" id="2">Agregar al Carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-10 col-10">
-                <div class="card">
-                    <img src="img/ceviche.jpg" alt="" id="img-producto">
-                    <div class="card-body">
-                        <h3 class="nombre-producto">Chupe</h3>
-                        <ul>
-                            <li>Standard condition</li>
-                            <li>Single Size</li>
-                            <li>Room service</li>
-                        </ul>
-                        <h1 class="precio">Precio: S/ 13.00</h1>
-                        <div class="d-flex">
-                            <div class="btn-group me-3 col-4" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-primary boton-menos">-</button>
-                                <input type="text" class="cantidad" name="cant" value="1" id="3" style="width:40px">
-        
-                                <button type="button" class="btn btn-outline-primary boton-mas">+</button>
-                            </div>
-                            <div class="d-grid gap-2 col-7 mx-auto">
-                                <button class="btn btn-primary boton-agregar" type="button" id="3">Agregar al Carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row pb-5" style="display: flex; justify-content: center;">
-            <div class="col-lg-4 col-md-6 col-sm-10 col-10">
-                <div class="card mb-3">
-                    <img src="img/arroz_con_mariscos.jpg" alt="" id="img-producto">
-                    <div class="card-body">
-                        <h3 class="nombre-producto">Yuca Frita</h3>
-                        <ul>
-                            <li>Standard condition</li>
-                            <li>Single Size</li>
-                            <li>Room service</li>
-                        </ul>
-                        <h1 class="precio">Precio: S/ 14.50</h1>
-                        <div class="d-flex">
-                            <div class="btn-group me-3 col-4" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-primary boton-menos">-</button>
-                                <input type="text" class="cantidad" name="cant" value="1" id="4" style="width:40px">
-                                <button type="button" class="btn btn-outline-primary boton-mas">+</button>
-                            </div>
-                            <div class="d-grid gap-2 col-7 mx-auto">
-                                <button class="btn btn-primary boton-agregar" type="button" id="4">Agregar al Carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-10 col-10">
-                <div class="card mb-3">
-                    <img src="img/ceviche.jpg" alt="" id="img-producto">
-                    <div class="card-body">
-                        <h3 class="nombre-producto">Sopa de Mariscos</h3>
-                        <ul>
-                            <li>Standard condition</li>
-                            <li>Single Size</li>
-                            <li>Room service</li>
-                        </ul>
-                        <h1 class="precio">Precio: S/ 8.20</h1>
-                        <div class="d-flex">
-                            <div class="btn-group me-3 col-4" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-primary boton-menos">-</button>
-                                <input type="text" class="cantidad" name="cant" value="1" id="5" style="width:40px">
-                                <button type="button" class="btn btn-outline-primary boton-mas">+</button>
-                            </div>
-                            <div class="d-grid gap-2 col-7 mx-auto">
-                                <button class="btn btn-primary boton-agregar" type="button" id="5">Agregar al Carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-10 col-10">
-                <div class="card mb-3">
-                    <img src="img/chicharron.jpg" alt="" id="img-producto">
-                    <div class="card-body">
-                        <h3 class="nombre-producto">Sopa de Pescado</h3>
-                        <ul>
-                            <li>Standard condition</li>
-                            <li>Single Size</li>
-                            <li>Room service</li>
-                        </ul>
-                        <h1 class="precio">Precio: S/ 9.80</h1>
-                        <div class="d-flex">
-                            <div class="btn-group me-3 col-4" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-primary boton-menos">-</button>
-                                <input type="text" class="cantidad" name="cant" value="1" id="6" style="width:40px">
-                                <button type="button" class="btn btn-outline-primary boton-mas">+</button>
-                            </div>
-                            <div class="d-grid gap-2 col-7 mx-auto">
-                                <button class="btn btn-primary boton-agregar" type="button" id="6">Agregar al Carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="container-fluid pt-4 pb-5">
+        <div class="contenedor-productos">
+
         </div>
     </section>
 
     <!-- Archivo de Javascript -->
-    <script src="js/carrito.js"></script>
     <script src="js/productos.js"></script>
+    <script src="js/cargaProductos.js"></script>
+    <script src="js/carrito.js"></script>
     <script src="js/pedido.js"></script>
 
 </body>

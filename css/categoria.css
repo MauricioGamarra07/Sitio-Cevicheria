@@ -29,11 +29,20 @@
     height: 250px;
 }
 .compra{
-    position: absolute;
-    right: 50px;
-    top: 20px;
+    position: relative;
+    float: right;
+    top: -20%;
+    right: 5%;
     cursor: grab;
 }
+/* .contador{
+    position: absolute;
+    top: 0;
+    right: 10%;
+    background-color: coral;
+    padding: 5px 10px;
+    border-radius: 50%;
+} */
 h1{
     font-family: 'Lobster', cursive;
 }
@@ -79,21 +88,16 @@ h1{
     height: 70%;
     overflow: scroll;
 } */
-/* .producto{
-    background-color: white;
-    padding: 20px;
-    width: 95%;
-    height: 35%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-    margin: 2px auto;
-    border: 2px solid gray;
-} */
-.producto img{
-    width: 25%;
-    max-height: 90px;
+.contenedor-productos{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,32%);
+    grid-gap: 30px 2%;
+}
+.contenedor-productos img{
+    height: 260px;
 }
 .pie-compra{
     position: absolute;
