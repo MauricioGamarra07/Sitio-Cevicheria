@@ -1,3 +1,10 @@
+@media(max-width: 1100px) {
+    .cont-compra{
+        width: 80%;
+        height: 80%;
+    }
+    
+}
 @media(max-width: 1000px) {
     .contenido{
         flex-direction: column;
@@ -5,6 +12,57 @@
     }
     .columna1, .columna2{
         width: 90%;
+    }
+    .contenedor-productos{
+        grid-template-columns: repeat(2,50%);
+        grid-gap: 30px 2%;
+    }
+}
+@media(max-width: 835px) {
+    .cont-compra{
+        width: 90%;
+    }
+}
+@media(max-width: 740px) {
+    .contenedor-productos img{
+        height: 200px;
+    }
+    table thead{
+        display: none;
+    }
+    table tr{
+        margin-bottom: 10px;
+        display: block;
+    }
+    table td{
+        display: block;
+        text-align: right;
+    }
+    table td::before{
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+    }
+    .eliminar{
+        margin: 0;
+    }
+}
+@media(max-width: 600px) {
+    .div-img-carta{
+        width: 95%;
+        height: 300px;
+    }
+    .contenedor-productos img{
+        height: 180px;
+    }
+}
+@media(max-width: 550px) {
+    .contenedor-productos{
+        grid-template-columns: repeat(1,100%);
+    }
+    .contenedor-productos img{
+        height: 200px;
     }
 }
 @media(max-width: 500px) {
@@ -18,10 +76,9 @@
         clip-path: ellipse(90% 65% at 50% 30%);
     }
 }
-@media(max-width: 600px) {
-    .div-img-carta{
-        width: 95%;
-        height: 300px;
+@media(max-width: 400px) {
+    .contenedor-productos img{
+        height: 160px;
     }
 }
 @media(max-width: 360px) {

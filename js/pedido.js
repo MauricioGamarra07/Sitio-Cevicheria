@@ -102,6 +102,7 @@ function cargarEventos() {
                 array.push(id);
                 array.sort();
                 contador ++;
+                contadorCarrito.style.display = "block";
                 contadorCarrito.textContent = contador;
                 arregloProducto.push(infoProductos[i]["id"]);
                 arregloProducto.push(infoProductos[i]["img"]);

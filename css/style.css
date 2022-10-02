@@ -172,9 +172,6 @@ img {
    color: #fff;
    padding: 0.5rem 0.625rem;
 }
-.socials a:hover {
-   color: var(--celeste);
-}
 /* Media queries */
 /* ? @900px */
 @media(max-width: 56.25rem) {
