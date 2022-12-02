@@ -3,11 +3,6 @@
 img {
    width: 100%;
 }
-
-.navbar nav {
-   order: 1;
-   margin-right: 10px;
-}
 .navbar nav a {
    padding: 0.938rem;
    font-weight: 900;
@@ -175,20 +170,6 @@ img {
 /* Media queries */
 /* ? @900px */
 @media(max-width: 56.25rem) {
-   .navbar .logo {
-      order: 1;
-      padding: 0.938rem 0;
-      transform: none;
-   }
-   
-   .navbar nav {
-      order: 3;
-   }
-   
-   .navbar .social {
-      display: none;
-      order: 2;
-   }
    
    .hero .content h1 {
       font-size: 4.688rem;
@@ -227,10 +208,6 @@ img {
 
 /* ? @600px */
 @media(max-width: 37.5rem) {
-   .navbar {
-      flex-direction: column;
-      height: 6.875rem;
-   }
 
    .navbar .logo {
       padding: 0 1.25rem 0.938rem;

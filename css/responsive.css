@@ -18,6 +18,15 @@
         grid-gap: 30px 2%;
     }
 }
+@media(max-width: 900px) {
+    .column-2{
+        width: 90%;
+    }
+    .navbar{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
 @media(max-width: 835px) {
     .cont-compra{
         width: 90%;
@@ -63,6 +72,12 @@
     }
     .contenedor-productos img{
         height: 200px;
+    }
+    .column-2{
+        width: 100%;
+    }
+    .navbar nav a {
+        font-size: 0.800rem;
     }
 }
 @media(max-width: 500px) {

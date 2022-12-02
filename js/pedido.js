@@ -46,13 +46,10 @@ function cargarEventos() {
             var input = buttonClicked.parentElement.children[1];
             /* console.log(input); */
             var inputValue = input.value;
+            /* console.log(inputValue); */
             newValue = parseInt(inputValue) + 1;
             input.value = newValue;
-
-            /* c++;
-            c = (c < 10) ? "0" + c : c;
-            cantidad.textContent = c;
-            console.log(c); */
+            /* console.log(newValue); */
         });
     }
     for (let i = 0; i < disminuir.length; i++) {
@@ -67,23 +64,17 @@ function cargarEventos() {
             } else {
                 alert('La cantidad debe ser mayor a 0');
             }
-            /* if (c > 1){
-                c--;
-                c = (c < 10) ? "0" + c : c;
-                cantidad.textContent = c;
-                console.log(c);
-            } */
         });
     }
 
-    let total = 0;
+    let cantidadArt = 0;
     let totalCompra = 0;
     let contador = 0;
     let array = [0]; //Array de los Id's
     for (let i = 0; i < agregar.length; i++) {
         agregar[i].addEventListener('click', () => {
-            let cantidad = parseInt(newValue);
-            /* console.log(cantidad); */
+            cantidadArt = parseInt(newValue);
+            console.log(cantidadArt);
 
             //Capturamos el numero de id que está en su atributo id
             let id = parseInt(agregar[i].getAttribute('id'));
@@ -98,15 +89,15 @@ function cargarEventos() {
 
             /* Si el numero buscado en el array de Id's es igual al id
             capturado significa que ya se agregó el producto, por ello
-            solo le sumamos la cantidad */
+            solo le sumamos la cantidadArt */
             if (num == id) {
                 console.log("Ya se agregó");
                 /* Recorremos el arreglo del Carrito y buscamos que id es igual al id 
                 capturado, una vez encontrado estaremos dentro del arreglo del Producto
-                y solo faltaría sumarle las cantidades */
+                y solo faltaría sumarle las cantidadArtes */
                 for (let i = 0; i < arregloCarrito.length; i++) {
                     if (arregloCarrito[i][0] == id) {
-                        arregloCarrito[i][4] += cantidad;
+                        arregloCarrito[i][4] += cantidadArt;
                     }
                     console.log(arregloCarrito);
                 }
@@ -125,7 +116,7 @@ function cargarEventos() {
                 arregloProducto.push(infoProductos[i]["img"]);
                 arregloProducto.push(infoProductos[i]["nombre"]);
                 arregloProducto.push(infoProductos[i]["precio"]);
-                arregloProducto.push(cantidad);
+                arregloProducto.push(cantidadArt);
 
                 arregloCarrito.push(arregloProducto);
 
@@ -154,11 +145,11 @@ function cargarEventos() {
         });
     }
 
-    for (let i = 0; i < eliminarArticulo.length; i++) {
-        eliminarArticulo[i].addEventListener('click', () => {
+    /* for (let a = 0; a < eliminarArticulo.length; a++) {
+        eliminarArticulo[a].addEventListener('click', () => {
             console.log("Click en eliminar");
         })
-    }
+    } */
 
     vaciarCarrito.addEventListener("click", (e) => {
         contador = 0;

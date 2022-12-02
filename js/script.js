@@ -18,7 +18,7 @@ window.onscroll = function () {
 }
 
 // Smooth Scrolling
-$('#navbar a').on('click', function (e) {
+/* $('#navbar a').on('click', function (e) {
    if (this.hash !== '') {
       e.preventDefault();
 
@@ -27,11 +27,10 @@ $('#navbar a').on('click', function (e) {
       $('html, body').animate(
          {
             scrollTop: $(hash).offset().top - 50,
-         },
-         2000
+         },2000
       );
    }
-});
+}); */
 
 //Modal de la Ubicación
 let openModal = document.querySelector('.boton-ubicacion');

@@ -14,7 +14,7 @@ function colocarProductos(producto) {
             <p>Precio: S/${producto[i].precio}</p>
             <div class="btn-group mb-3">
                 <button type="button" class="btn btn-outline-primary boton-menos">-</button>
-                <input type="text" class="cantidad" name="cant" value="1" id="1" style="width:60px">
+                <input type="text" class="cantidad" name="cant" value="1" id="${producto[i].id}" style="width:60px" disabled>
                 <button type="button" class="btn btn-outline-primary boton-mas">+</button>
             </div>  
             <button type="button" class="btn btn-primary agregar" id="${producto[i].id}">Agregar al carrito</button>

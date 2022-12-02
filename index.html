@@ -53,7 +53,7 @@
    <header class="hero">
       <div id="navbar" class="navbar top">
          <h1 class="logo">
-            <a href="#inicio">
+            <a>
                <span>Cevicheria <i class="fa-sharp fa-solid fa-fish"></i></span> Pescadito
             </a>
          </h1>
@@ -62,6 +62,7 @@
                <li><a href="#inicio">Inicio</a></li>
                <li><a href="#nosotros">Nosotros</a></li>
                <li><a href="#carta">Carta</a></li>
+               <li><a href="#locales">Locales</a></li>
                <li><a href="#galeria">Galeria</a></li>
                <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -151,7 +152,7 @@
    </div>
 
    <!-- Acerca de Nosotros -->
-   <section class="nosotros container-fluid" style="position: relative;">
+   <section class="nosotros container-fluid" style="position: relative;" id="nosotros">
       <div class="row bg-light">
          <div class="col-lg-6">
             <div class="local">
@@ -189,7 +190,7 @@
    </section>
 
    <!-- CARTA -->
-   <div class="section-subtitulo">
+   <div class="section-subtitulo" id="carta">
       <h4 class="display-6 intro">Ahora te mostraré todos los productos que ofrecemos!</h4>
       <div class="subtitulo">
          <img src="img/ola.png" alt="Tres lineas curvas en forma de olas" id="onda">
@@ -348,7 +349,7 @@
    </section>
 
    <!-- GALERIA -->
-   <div class="section-subtitulo">
+   <div class="section-subtitulo" id="galeria">
       <h4 class="display-6 intro">Fotos de todos los productos!</h4>
       <div class="subtitulo">
          <img src="img/ola.png" alt="Tres lineas curvas en forma de olas" id="onda">
@@ -390,7 +391,7 @@
    </section>
 
    <!-- Contacto -->
-   <div class="section-subtitulo">
+   <div class="section-subtitulo" id="contacto">
       <h4 class="display-6 intro">Desde aquí podrás contactarnos!</h4>
       <div class="subtitulo">
          <img src="img/ola.png" alt="Tres lineas curvas en forma de olas" id="onda">
@@ -398,16 +399,11 @@
          <img src="img/ola.png" alt="Tres lineas curvas en forma de olas" id="onda">
       </div>
    </div>
-   <section id="contacto" class="contact flex-columns">
+   <section class="contact flex-columns">
       <div class="row">
-         <div class="column">
-            <div class="column-1">
-               <img src="img/contact.jpg" alt="">
-            </div>
-         </div>
 
          <div class="column">
-            <div class="column-2 bg-light">
+            <div class="column-2">
                <h2>Dejanos tu mensaje</h2>
                <form action="thankyou.html" data-netlify="true">
                   <div class="form-group">
